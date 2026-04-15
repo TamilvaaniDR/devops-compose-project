@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Pipeline Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd369;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #ffd369;
+      color: #333;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DevOps App 🚀</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Automated DevOps Pipeline</h2>
+  <p>Build, Test, and Deploy seamlessly using Docker, Docker Compose, and Jenkins pipeline automation.</p>
+  <button class="btn" onclick="showMessage()">Run Test</button>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>⚙️ Docker</h3>
+    <p>Containerize your applications for consistent environments.</p>
+  </div>
+  <div class="card">
+    <h3>🔗 Jenkins</h3>
+    <p>Automate build and testing workflows with CI/CD pipelines.</p>
+  </div>
+  <div class="card">
+    <h3>🧪 Testing</h3>
+    <p>Run integration tests using Docker Compose services.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 DevOps Pipeline Project | Built for Practice</p>
+</footer>
+
+<script>
+  function showMessage() {
+    alert("Integration Test Triggered! ✅");
+  }
+</script>
+
+</body>
+</html>

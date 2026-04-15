@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: devops_web
+    ports:
+      - "8080:80"
+
+  test:
+    image: alpine
+    depends_on:
+      - web
+    volumes:
+      - ./tests:/tests
+    entrypoint: ["/bin/sh", "/tests/test.sh"]
